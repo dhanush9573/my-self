@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #grey, #grey);
+  color: #grey;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #grey;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #b8e8ff;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #grey;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background: #00e0ff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #grey;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #grey;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+p {
+  color: #grey;
+  max-width: 700px;
+  line-height: 1.6;
+  font-size: 1.05em;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 25px;
+  background: #00e0ff;
+  color: #grey;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #grey;
+    transform: scale(1.05);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #aaa;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 200px;
+    height: calc(100vh - 70px);
+    background: rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    align-items: center;
+    justify-content: s
